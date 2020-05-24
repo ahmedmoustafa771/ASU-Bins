@@ -5,6 +5,9 @@
     font-weight: bold;
     padding: 4rem 0;
     height: 10vh;
+    @media (max-width:576px) {
+        margin-bottom: 4rem;
+    }
 }
 
 .logo {
