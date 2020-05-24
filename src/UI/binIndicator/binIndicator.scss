@@ -1,0 +1,24 @@
+.binIndicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 3px outset #FFFFFF;
+
+    &__icon {
+        font-size: 2.2rem;
+        text-align: center;
+        color: white;
+
+    }
+}
+
+.red {
+    background-color:#f50000;
+}
+
+.blue {
+    background-color: #2e578b;
+}

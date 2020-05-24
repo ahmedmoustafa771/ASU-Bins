@@ -1,0 +1,40 @@
+.binState {
+    align-items: center;
+    padding: 4.5rem;
+    justify-content: space-between;
+}
+
+.binState__map{    
+    padding: 5rem 3rem;
+    position: relative;
+    &--img {
+        width: 100%;
+    }
+
+    .bin1 {
+        position: absolute;
+        top:20%;
+        left:40%
+    }
+    
+    .bin2 {
+        position: absolute;
+        top:70%;
+        left:40%
+    }
+    
+    .bin3 {
+        position: absolute;
+        top:46%;
+        left:10%
+    }
+}
+
+.binState__board {
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
