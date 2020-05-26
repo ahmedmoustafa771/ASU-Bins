@@ -1,6 +1,7 @@
 .mainPage {
+    min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.6),rgba(255, 255, 255, 0.6)) , url(../assets/24131909_377294069360392_8484384010358490932_o.jpg);
+    background-image: linear-gradient(to right bottom,#04426f71,#065f9f71), url(../assets/24131909_377294069360392_8484384010358490932_o.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

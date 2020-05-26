@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './MainPage.scss';
 import { Container } from 'react-bootstrap';
 
@@ -9,21 +9,11 @@ import Spinner from '../UI/Spinner/Spinner';
 
 const mainPage = props => {
     const [loading,setLoading] = useState(true);
-    let images=[];
-    const loadImages = () => {
-             images = [
-                require('../assets/2.PNG'),
-                require('../assets/24131909_377294069360392_8484384010358490932_o.jpg'),
-                require('../assets/download (1).png')
-            ];
-    };
 
-    async function asyncCall () {
-        const images2 = await loadImages();
+    useEffect (() => {
         setLoading(false);
-    };
-
-    asyncCall();
+    }, []);
+    
 
     let mainContent = (
         <div className="mainPage">
