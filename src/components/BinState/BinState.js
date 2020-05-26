@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './BinState.scss';
 import { Row, Col } from 'react-bootstrap';
 import axios from 'axios';
+import Skeleton from 'react-loading-skeleton';
 
 import mapImg from '../../assets/2.PNG';
 import Bin from '../../UI/binIndicator/binIndicator';
@@ -43,9 +44,12 @@ const binState = props => {
         mainContent = (
             <Row className="binState flex-row " noGutters>
                 <Col md={12} lg={6} >
-                    <div className="binState__map">
+                    <div className="binState__map">{
+                        <React.Fragment>
                         <img src={mapImg} alt="asu_map" className="binState__map--img" />
                         {bin}
+                        </React.Fragment>  
+                        || <Skeleton height={450} />}
                     </div>
                 </Col>
 

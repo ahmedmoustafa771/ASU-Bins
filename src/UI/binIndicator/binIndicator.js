@@ -5,9 +5,9 @@ import { RiDeleteBinLine } from "react-icons/ri";
 const binIndicator = props => {
     let classes ="";
     if (props.full) {
-        classes = "red" + " " + props.location;
+        classes = "red " + props.location;
     } else {
-        classes = "blue" + " " + props.location;
+        classes = "blue " + props.location;
     }
     return (
         <div className={"binIndicator "+ classes}>
