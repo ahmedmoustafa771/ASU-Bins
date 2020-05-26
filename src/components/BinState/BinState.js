@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './BinState.scss';
 import { Row, Col } from 'react-bootstrap';
 import axios from 'axios';
-import Skeleton from 'react-loading-skeleton';
 
 import mapImg from '../../assets/2.PNG';
 import Bin from '../../UI/binIndicator/binIndicator';
@@ -48,7 +47,7 @@ const binState = props => {
                     <div className="binState__map">
                         <img src={mapImg} 
                         alt="asu_map" className={imgLoaded? "binState__map--img" : "beforeLoading"} onLoad={() => {setImgLoaded(true)}}/>
-                        {imgLoaded? bin : <Skeleton height={400} />}
+                        {imgLoaded? bin : <Spinner />}
                     </div>
                 </Col>
 
