@@ -12,6 +12,7 @@ import Spinner from '../../UI/Spinner/Spinner';
 const binState = props => {
     const [binArray, setBinArray] = useState([]);
     const [loading,setLoading] = useState(true);
+    const [imgLoaded,setImgLoaded] = useState(false);
     useEffect(() => {
         axios.get("https://asu-bins.firebaseio.com/bins.json")
         .then(res =>{
@@ -42,14 +43,12 @@ const binState = props => {
         mainContent = <Spinner />;
     } else {
         mainContent = (
-            <Row className="binState flex-row " noGutters>
+            <Row className="binState" noGutters>
                 <Col md={12} lg={6} >
-                    <div className="binState__map">{
-                        <React.Fragment>
-                        <img src={mapImg} alt="asu_map" className="binState__map--img" />
-                        {bin}
-                        </React.Fragment>  
-                        || <Skeleton height={450} />}
+                    <div className="binState__map">
+                        <img src={mapImg} 
+                        alt="asu_map" className={imgLoaded? "binState__map--img" : "beforeLoading"} onLoad={() => {setImgLoaded(true)}}/>
+                        {imgLoaded? bin : <Skeleton height={400} />}
                     </div>
                 </Col>
 
